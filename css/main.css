@@ -1,0 +1,121 @@
+html {
+    box-sizing: border-box
+}
+  
+  /* The Universal Selector */
+  *, /* All elements*/
+  *::before, /* All ::before pseudo-elements */
+  *::after { /* All ::after pseudo-elements */
+    /* height & width will now include border & padding by default
+       but can be over-ridden as needed */
+    box-sizing: inherit;
+}
+  
+  /* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+:root {
+    font-size: 62.5%
+}
+  
+body {
+    background-color: gray;
+  /* Use a system font, if none are available use an available sans-sarif   font */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 0;
+    background-color: #0F5F60;
+    min-height: 100vh;
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wrapper {
+    display: grid;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 120px 40px 80px 90px 60px;
+    grid-template-areas:
+        "picture picture"
+        "name name"
+        "job job"
+        "rate rate"
+        "call chat"
+}
+
+#picture,
+#name,
+#job,
+#rate,
+#call, #chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#picture {
+    background-color: white;
+    position: relative;
+    grid-area: picture;
+}
+
+    #picture > img {
+        border-radius: 50%;
+        border: solid 3px #7FD5A7;
+    }
+
+    #picture > .online {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        color: #CCC;
+    }
+
+#name {
+    background-color: white;;
+    grid-area: name;
+    align-items: flex-start;
+
+}
+#job {
+    grid-area: job;
+    background-color: #f3f3f3;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+    #job > #rating {
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    #rating > span.star {
+        margin: 0 2px;
+    }
+
+#rate {
+    grid-area: rate;
+    background-color: white;
+    flex-direction: column;
+    font-size: 2rem;
+}
+    #rate > span {
+        padding: 2px;
+    }
+
+    #rate:first-child {
+        font-weight: bold;
+    }
+
+#call {
+    grid-area: call;
+    background-color: #66d189;
+    color: white;
+}
+
+#chat {
+    grid-area: chat;
+    background-color: #5ABD7C;
+    color: white;
+}
+
