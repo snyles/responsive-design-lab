@@ -66,9 +66,9 @@ body {
 
     #picture > .online {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 1rem;
+        top: 10px;
+        right: 15px;
+        font-size: 1.2rem;
         color: #CCC;
     }
 
@@ -99,10 +99,13 @@ body {
     grid-area: rate;
     background-color: white;
     flex-direction: column;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: #666;
 }
-    #rate > span {
-        padding: 2px;
+
+    #rate > strong {
+        color: #333;
     }
 
     #rate:first-child {
@@ -139,7 +142,7 @@ body {
             "call chat" */
 
         grid-template-columns: 100px 100px 300px;
-        grid-template-rows: 45px 130px 55px;
+        grid-template-rows: 50px 130px 60px;
         grid-template-areas: 
             "picture picture name"
             "picture picture job"
@@ -147,7 +150,7 @@ body {
     }
 
     #picture > img {
-        width: 120px;
+        width: 110px;
     } 
 
     #name {
@@ -180,6 +183,11 @@ body {
         background-color: #f3f3f3;
         font-size: 1.6rem;
         color: #333;
-
+        line-height: 2rem;
     }
+
+    .online {
+        left: 10px;
+    }
+
 }
