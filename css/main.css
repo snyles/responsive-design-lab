@@ -76,6 +76,7 @@ body {
     background-color: white;;
     grid-area: name;
     align-items: flex-start;
+    font-weight: bold;
 
 }
 #job {
@@ -121,7 +122,6 @@ body {
 }
 
 #details {
-    grid-area: details;
     display: none;
 }
 
@@ -139,10 +139,9 @@ body {
             "call chat" */
 
         grid-template-columns: 100px 100px 300px;
-        grid-template-rows: 40px 60px 80px 50px;
+        grid-template-rows: 45px 130px 55px;
         grid-template-areas: 
             "picture picture name"
-            "picture picture job"
             "picture picture job"
             "call chat rate"
     }
@@ -151,30 +150,36 @@ body {
         width: 120px;
     } 
 
-    #name, #rate {
+    #name {
         flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
         background: #f3f3f3;
-        padding-left: 20px;
-    }
-    
-    #name {
+        padding-left: 25px;
         align-items: flex-end;
     }
 
+
     #job {
         align-items: flex-start;
-        padding-left: 20px;
+        padding-left: 25px;
     }
 
     #details {
-        display: contents;
-        font-size: 1.5rem;
-        color: #ccc;
-        line-height: 2rem;
+        display: inline-block;
         border-left: solid 2px #7FD5A7;
-        padding: 0 10px;
+        font-size: 1.5rem;
+        color: #aaa;
+        line-height: 2rem;
+        padding: 0 0 0 10px;
+        margin: 10px 0 0 0;
     }
     
+    #rate {
+        align-items: flex-start;
+        padding-left: 25px;
+        background-color: #f3f3f3;
+        font-size: 1.6rem;
+        color: #333;
+
+    }
 }
